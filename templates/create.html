@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+	<title>Create</title>
+</head>
+
+<body>
+    <div class="creat">
+        <div class="card-content">
+            <div class="card-right">
+                <div class="creat-input">
+                    <div class="select-people">
+                        <form method="POST" enctype="multipart/form-data" action="{{ url_for('upload_file') }}">
+                            <div class="container-file">
+                                <div class="input-file">
+                                    <span class="file-label" id="file-label">點擊選擇檔案</span>
+                                    <input type="file" id="filename" name="filename" accept="image/*" required onchange="updateFileName()">
+                                </div>
+                                <button class="submit-button" name="submit">上傳</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="view_container">
+                    <!-- <div class="output1" ></div> -->
+                    <!-- <div class="view_box">輸出</div> -->
+                    <div class="img_container">
+                        <img class="img_background">
+                        <img class="img_hair">
+                    </div>
+                </div>
+            </div>
+            <div class="card-left">
+                <div class="select-hair-menu">
+                    <div class="hair-menu" onclick="openPopup();">
+                        <!--<div class="set_row">選擇頭髮</div>-->
+                        <div class="hair-menu-initial-img"><img class="select_img" src="static/image/default.jpg"></div>
+                    </div>
+                    <!--<div class="set_row"><button class="submit_img_button" name="confirm" onclick="send_img_to_python();">確定</button></div>-->
+                    <div id="popup" class="popup-overlay"  onclick="closePopup();">
+                        <div class="popup-content">
+                            <div class="hair-list-view"onclick="send_img_to_python();">
+                                <!-- Your image list goes here -->
+                                <img class="hair-view" src="static/image/hair/0.jpg">
+                                <img class="hair-view" src="static/image/hair/1.jpg">
+                                <img class="hair-view" src="static/image/hair/2.jpg">
+                                <img class="hair-view" src="static/image/hair/3.jpg">
+                                <img class="hair-view" src="static/image/hair/4.jpg">
+                                <img class="hair-view" src="static/image/hair/5.jpg">
+                                <img class="hair-view" src="static/image/hair/6.jpg">
+                                <img class="hair-view" src="static/image/hair/7.jpg">
+                                <img class="hair-view" src="static/image/hair/8.jpg">
+                                <img class="hair-view" src="static/image/hair/9.jpg">
+                                <img class="hair-view" src="static/image/hair/10.jpg">
+                                <img class="hair-view" src="static/image/hair/11.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="loading-blank">　　　</div>
+                <div class="loading-dot">
+                    <div class="loading-spinner">輸入中</div>
+                    <div class="loading-spinner1">●</div>
+                    <div class="loading-spinner2">●</div>
+                    <div class="loading-spinner3">●</div>
+                </div>
+                <div class="loading-finish">處理完成 - 請調整</div>
+                <div class="select_box2">
+                    <div class="slidercontainer">
+                        <div class="set_row text">橫向位置</div>
+                        <div class="set_row slider_x_value">0</div>
+                        <input class="slider_css slider_x" type="range" min="0" , max="0" value="0">
+                    </div>
+                    <div class="slidercontainer">
+                        <div class="set_row">縱向位置</div>
+                        <div class="set_row slider_y_value">0</div>
+                        <input class="slider_css slider_y" type="range" min="0" , max="0" value="0">
+                    </div>
+                    <div class="slidercontainer">
+                        <div class="set_row">頭髮寬度</div>
+                        <div class="set_row slider_size_x_value">0</div>
+                        <input class="slider_css slider_size_x" type="range" min="0" , max="0" value="0">
+                    </div>
+                    <div class="slidercontainer">
+                        <div class="set_row">頭髮高度</div>
+                        <div class="set_row slider_size_y_value">0</div>
+                        <input class="slider_css slider_size_y" type="range" min="0" , max="0" value="0">
+                    </div>
+                    <div class="slidercontainer">
+                        <div class="set_row">頭髮旋轉</div>
+                        <div class="set_row slider_rotate_value">0</div>
+                        <input class="slider_css slider_rotate" type="range" min="0" , max="0" value="0">
+                    </div>
+                    <div class="certain-button"><button class="certain" type="button">送　出</button></div>
+                </div>
+                <div class="loading-blank-con">
+                    <div class="loading-blank-x">　</div>
+                    <div class="loading-blank-0">　</div>
+                    <div class="loading-blank-1">　</div>
+                    <div class="loading-blank-2">　</div>
+                    <div class="loading-blank-3">　</div>
+                    <div class="loading-blank-4">　</div>
+                    <div class="loading-blank-5">　</div>
+                    <div class="loading-blank-6">　</div>
+                    <div class="loading-blank-7">　</div>
+                    <div class="loading-blank-8">　</div>
+                    <div class="loading-blank-9">　</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="show_creat">
+        <div class="card-content-show">
+            <div class="card-content-img_button">
+                <img class="canvas" src="static/image/default.jpg">
+                <div class="style_container">
+                    <button class="pre_page">回到設定</button>
+                    <div class="opt_css opt1">原圖</div>
+                    <div class="opt_css opt2">素描圖</div>
+                    <button class="download" onclick="downloadBase64img();">下載</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="static/js/script.js"></script>
+
+<script>
+    var img = '{{img_stream}}';
+    if (img != ""){
+        $('.img_background').attr('src',"data:image/jpeg;base64,"+img);
+        $('.submit_img_button').toggle(true);
+    }
+</script>
+<script>
+    function openPopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "block";
+
+        var container = document.querySelector(".hair-list-view");
+        container.classList.add("hair-list-view");
+    }
+    function closePopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "none";
+    }
+</script>
+<script>
+    function updateFileName() {
+        var fileInput = document.getElementById('filename');
+        var fileLabel = document.getElementById('file-label');
+
+        if (fileInput.files.length > 0) {
+            fileLabel.textContent = fileInput.files[0].name;
+
+        } else {
+            fileLabel.textContent = '點擊輸入';
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,240 @@
+/*form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 500px;
+}*/
+
+/*label {
+    display: block;
+    font-size: 1.2em;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    font-size: 1.2em;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}*/
+
+/*button {
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 5px;
+
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}*/
+/* ================= */
+/*body{
+    margin: 0px;
+}*/
+/*.creat{
+    height:100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.creat.active{
+    display: none;
+}*/
+
+/* 左半部flex容器 */
+/*.contaner1{
+    display: flex;
+    flex-direction: column;
+}
+.contaner1.active{
+    display: none;
+}*/
+
+/* 右半部flex容器 */
+/*.contaner2{
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+}*/
+
+/* 輸入的flex容器 */
+/*.input_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}*/
+
+/* 印出的flex容器 */
+/*.view_container{
+    display: flex;
+    justify-content : center ;
+}*/
+
+/* 選擇頭髮的flex容器 */
+/*.select_container{
+    display: flex;
+    flex-direction: column;
+    justify-content :center ;
+    width: 260px;
+    background-color:rgb(229, 229, 229);
+    margin-bottom: 15px;
+}*/
+
+/* 印出用box */
+/*.view_box{
+    height: 256px;
+    width: 256px;
+    margin-top: 5px;
+}*/
+
+/*.output1{
+    height: 512px;
+    width: 512px;
+    margin: 0px;
+    margin-top:10px;
+    background-image: url("../image/default.jpg");
+    background-size: 512px 512px;
+    background-repeat: no-repeat;
+}*/
+
+.hair_menu{
+    cursor: pointer;
+}
+
+.contaner1-2{
+    display: none;
+}
+.contaner1-2.active{
+    display: flex;
+    flex-wrap:wrap ;
+    align-content: flex-start;
+    justify-content :center ;
+    overflow-y: auto;
+    width : 550px;
+    height : 600px;
+    background-color:rgba(181, 181, 181, 0.309);
+}
+
+.hair_view{
+    width:128px;
+    height : 128px;
+    margin :3%;
+    background-color:rgb(185, 25, 166);
+}
+
+/*.select_box1{
+    display: flex;
+    flex-direction: column;
+    justify-content :center ;
+    width: 260px;
+    background-color:rgb(229, 229, 229);
+    margin-bottom: 15px;
+}
+
+.select_box2{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content :center ;
+}*/
+
+    /* height: 200px;
+    width: 200px;
+    background-color:rgb(25, 86, 185); */
+/*.slidercontainer{
+    width: 100%;
+    margin: 3px;
+}
+.slider_css{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin: 0px;
+}
+.slider_css:hover{
+    opacity: 1;
+}*/
+
+/*.set_row{
+    display: flex;
+    width: 100%;
+    justify-content :center ;
+}
+
+ .submit_img_button{
+    display: none;
+}
+.certain{
+    display: none;
+}
+
+.wait{
+    text-align:center;
+}
+
+.show_creat{
+    display: none;
+}
+.show_creat.active{
+    height:100vh;
+    width: 100vw;
+    display: flex;
+    justify-content :center;
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.style_container{
+    display: flex;
+}
+
+.opt_css{
+    margin: 5px;
+    background-color: rgb(218, 218, 218);
+    font-size: 1cm;
+    cursor: pointer;
+}
+
+.canvas{
+    width: 512px;
+    height: 512px;
+}
+
+.button_container{
+    display: flex;
+}
+
+.img_container {
+    position: relative;
+    background-color: gray;
+    overflow:hidden;
+    width: 512px;
+    height: 512px;
+}
+.img_hair {
+    position: absolute;
+  }
+
+.img_background {
+    width: 100%;
+    height: 100%;
+}*/

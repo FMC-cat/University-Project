@@ -1,0 +1,371 @@
+.body {
+    background-color: #F1EEEE;}
+
+.creat {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 100px 400px;}
+
+.card-content {
+    width: 1000px;
+    height: 600px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: grid;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    grid-template-columns: 1fr 1fr ; /* 将容器分成两列 */
+    gap: 20px; /* 设置列之间的间隔 */}
+
+/* ------------------------------- */
+.card-right {
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;}
+
+.creat-input {
+    margin-bottom: 10px;}
+
+.container-file{
+    display: grid;
+    grid-template-columns: 5fr 1fr; /* 将容器分成两列 */
+    gap: 20px; /* 设置列之间的间隔 */}
+
+.input-file{
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    background-color: #555555;
+    color:#fff;
+    text-align:center;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    padding:5px 20px;
+    font-size:26px;}
+
+input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    padding: 10px 1px;
+    border: 1px solid #ccc;
+    border-radius: 5px;}
+
+.submit-button{
+    background-color: #555555;
+    color:#fff;
+    border-radius:10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center; /* 將元素水平置中 */
+    align-items: center; /* 將元素垂直置中 */}
+
+.submit-button:hover {
+    background-color: #555555e5;}
+
+.output1{
+    height: 512px;
+    width: 512px;
+    margin: 0px;
+    margin-top:10px;
+    background-image: url("../image/default.jpg");
+    background-size: 512px 512px;
+    background-repeat: no-repeat;}
+
+.img_container {
+    position: relative;
+    background-color: gray;
+    overflow:hidden;
+    width: 512px;
+    height: 512px;}
+
+.img_hair {
+    position: absolute;}
+
+.img_background {
+    width: 100%;
+    height: 100%;}
+
+/* --------------------------- */
+
+.card-left {
+    margin-top: 20px;
+margin-right: 10px;}
+
+.select-hair-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin: 1%; */}
+
+.hair-menu{
+    cursor: pointer;}
+
+.hair-menu-initial-img {
+    width: 256px;
+    height: 256px;
+    margin-top: 10px;}
+
+.hair-view{
+    width:128px;
+    height : 128px;
+    margin :3%;
+    background-color:rgb(185, 25, 166);}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;}
+
+.popup-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    max-width: 500px;}
+
+.hair-list-view {
+    display: flex;
+    flex-wrap: wrap;
+    width: 550px;
+    height: 600px;
+    overflow-y: scroll;
+    align-content: flex-start; /* 使元素顶部对齐 */}
+
+.hair-list-view::-webkit-scrollbar {
+    width: 0; /* 隐藏 Chrome、Safari 和 Opera 的滚动条 */}
+
+.hair-list-view {
+    -ms-overflow-style: none; /* 隐藏 Internet Explorer 和 Edge 的滚动条 */
+    scrollbar-width: none; /* 隐藏 Firefox 的滚动条 */}
+
+.submit_img_button {
+    font-size: 1.5em;
+
+    padding: 10px 30px;
+    margin-top: 10px;
+    margin-left: 70px;
+    /* box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
+    background-color: #555555;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;}
+
+.submit_img_button:hover {
+    background-color: #555555e5;}
+
+.loading-blank{
+    font-size: 20px;}
+
+.loading-dot{
+    display: grid;
+    font-size: 24px;
+    margin-left: 40px;
+    margin-right: 40px;
+    align-items: center;
+    grid-template-columns: 4fr 3fr 3fr 3fr; /* 将容器分成两列 */
+    gap: 20px; /* 设置列之间的间隔 */}
+
+.loading-spinner,
+.loading-spinner1,
+.loading-spinner2,
+.loading-spinner3 {
+  display: none;
+  font-size: 24px;
+  font-weight: bold;}
+
+.loading-finish{
+    text-align: center;
+    font-size: 24px;
+    display: none;
+    font-weight: bold;}
+
+.select_box2 {
+    margin-left: 40px;
+    margin-right: 40px;
+    align-items: center;
+    }
+
+.slidercontainer{
+    display: grid;
+    grid-template-columns: 2fr 1fr 3fr; /* 将容器分成两列 */
+    gap: 1px; /* 设置列之间的间隔 */
+    width: 100%;
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: bold;}
+
+.slider_css{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    transition: opacity .2s;
+    margin: 0px;}
+
+.slider_css:hover{
+    opacity: 1;}
+
+.certain-button{
+    display: flex;
+    justify-content: center; /* 將元素水平置中 */
+    height: 60px;
+    margin-bottom: 10px;}
+
+.certain {
+    margin-top: 20px;
+    font-size: 1.5em;
+    width: 100%;
+    /* box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
+    background-color: #555555;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: bold;}
+
+.certain:hover {
+    background-color: #555555e5;}
+
+/* --------------------------- */
+
+
+.loading-blank-ag {
+    display: none;
+}
+
+.show_creat{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 100px 400px;}
+
+.show_creat.active{
+    height:100vh;
+    width: 100vw;
+    display: flex;
+    justify-content :center;
+    flex-direction:column;
+    align-items:center;
+
+}
+.card-content-show {
+    width: 600px;
+    height: 600px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);}
+
+.style_container{
+    display: flex;
+}
+/*  */
+.pre_page{
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 30px;
+    background-color: #555555;
+    color:#fff;
+    border-radius:10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center; /* 將元素水平置中 */
+    align-items: center; /* 將元素垂直置中 */
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;}
+
+.opt_css{
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 30px;
+
+    background-color: #555555;
+    color:#fff;
+    border-radius:10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center; /* 將元素水平置中 */
+    align-items: center; /* 將元素垂直置中 */}
+.download{
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 30px;
+
+    background-color: #555555;
+    color:#fff;
+    border-radius:10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center; /* 將元素水平置中 */
+    align-items: center; /* 將元素垂直置中 */
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;}
+
+.canvas{
+    width: 512px;
+    height: 512px;
+}
+
+.button_container{
+    display: flex;
+}
+.loading-blank-con {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2px; /* 设置列之间的间隔 */
+    margin-left: 40px;
+    margin-right: 40px;
+    border: 2px solid #000; /* 边框样式 */
+    border-radius: 10px; /* 圆角半径 */
+    padding: 2px; /* 内边距大小 */
+}
+
+.loading-blank-x{
+    display: block;
+    /* background-color: #555555; */
+}
+
+.loading-blank-0 {
+    display: none;
+    background-color: #555555;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.loading-blank-1,
+.loading-blank-2,
+.loading-blank-3,
+.loading-blank-4,
+.loading-blank-5,
+.loading-blank-6,
+.loading-blank-7,
+.loading-blank-8{
+    display: none;
+    background-color: #555555;
+}
+.loading-blank-9{
+    display: none;
+    background-color: #555555;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
