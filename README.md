@@ -24,29 +24,33 @@
   >
   > 將 Models 解壓縮至 cyclegan 資料夾底下
 - ### 圖像正規化
----
+```
+```
 - ### 頭髮區域的遮罩
   - k-mean初始群心
   - 分水嶺分析
   - 頭髮群的擇定
   - 還原眉毛
----
+
 - ### 頭髮提取並恢復劉海
----
+```
+```
 - ### 模擬頭部
   - 建立目標參考點
   - 置換頭髮的前處理
   - 頭髮膚色轉換
----
+
 - ### 自動調整髮型位置大小
----
+```
+```
 - ### 應用Cycle-GAN使大頭貼手繪素描
   > 參考論文(Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks) ：https://junyanz.github.io/CycleGAN/
   > 
   > 論文所提出的神經網路，此神經網路擅長將圖像外顏色進行轉換例如馬轉斑馬等，且轉換圖片不需要成對也可以訓練
----
+
 - ### 介面設計
----
+```
+```
 - ## 參考文獻
   [1]	Google Play Store Hair try-on - hair styling
 
